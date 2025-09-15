@@ -4,64 +4,374 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: black;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px;
+            background: #f4f4f4;
+            border-bottom: 2px solid #ddd;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+            animation-delay: 1s;
+        }
+
+        header img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-right: 20px;
+        }
+
+        header h1, header h3 {
+            margin: 0;
+            color: #333;
+        }
+
+        .quote {
+            font-style: italic;
+            color: gray;
+            margin-top: 20px;
+            padding: 20px;
+            border-left: 5px solid #ccc;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .nav {
+            margin: 20px 0;
+            border-bottom: 2px solid #ccc;
+        }
+
+        .nav a {
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 1.2em;
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #007BFF;
+            transform: scale(1.1);
+        }
+
+        section {
+            margin-top: 40px;
+            padding: 10px;
+            border-bottom: 2px solid #ccc;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .form-container {
+            margin-top: 20px;
+        }
+
+        input[type="text"], input[type="email"], input[type="color"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /* Adjusted input[type="color"] */
+        input[type="color"] {
+            width: 40px;  /* Smaller width */
+            height: 40px; /* Square shape */
+            padding: 0;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .dark-mode {
+            background-color: #121212;
+            color: white;
+        }
+
+        .dark-mode header {
+            background: #333;
+        }
+
+        .dark-mode table, .dark-mode th, .dark-mode td {
+            border-color: #444;
+        }
+
+        .dark-mode .quote {
+            border-color: #444;
+        }
+
+        .dark-mode nav a:hover {
+            background-color: #333;
+        }
+
+        .menu {
+            position: fixed;
+            top: 60px;
+            left: 20px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            width: 200px;
+            z-index: 100;
+        }
+
+        .menu a {
+            display: block;
+            background-color: #f4f4f4;
+            color: black;
+            text-decoration: none;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px; 
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .menu a:hover {
+            background-color: #ddd;
+        }
+
+        .container-content {
+            margin-left: 220px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 1.2em;
+        }
+
+        /* Animation for welcome message */
+        #welcome {
+            text-align: center;
+            font-size: 2.5em;
+            color: #007BFF;
+            opacity: 1;
+            animation: fadeOut 1.5s forwards;
+            animation-delay: 1s;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                display: none;
+            }
+        }
+
+    </style>
 </head>
 <body>
 
-    <h1>My Name: Amangaliyev Aldiyar</h1>
-    <h2>Group: SE - 2403</h2>
+<div id="welcome">Welcome!</div>
 
-    <h3>About Me</h3>
-    <p>Hello! My name is Aldiyar, I am a student at AITU, studying Software Engineering. I enjoy working out at the Gym, participating in Arm-wrestling, and I am also passionate about programming.</p>
+<div class="menu">
+    <a href="#about">About Me</a>
+    <a href="#hobbies">My Hobbies</a>
+    <a href="#websites">My Favorite Websites</a>
+    <a href="#schedule">My Schedule</a>
+    <a href="#mood">My Mood</a>
+    <a href="#form">Form</a>
+</div>
 
-    <h3>My Hobbies</h3>
-    <ol>
-        <li>Gym</li>
-        <li>Arm-wrestling</li>
-        <li>Programming</li>
-    </ol>
+<div class="container">
+    <header>
+        <img src="file:///C:/Users/WebUser/Downloads/photo%20aldik.jpg" alt="My Photo">
+        <div>
+            <h1>My Name: Amangaliyev Aldiyar</h1>
+            <h3>Group: SE - 2403</h3>
+        </div>
+    </header>
 
-    <h3>My Favorite Websites</h3>
-    <ul>
-        <li><a href="https://www.youtube.com">YouTube</a></li>
-        <li><a href="https://www.instagram.com">Instagram</a></li>
-    </ul>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! My name is Aldiyar, I am a student at AITU, pursuing a degree in Software Engineering. I'm passionate about working with technology, solving problems through code, and constantly learning new things in the world of programming. I dream of creating something impactful in the world of tech.</p>
 
-    <h3>My Photo</h3>
-    <img src="image/Снимок экрана 2025-09-10 135506.png" alt="My Photo" width="200">
+        <p>Throughout my life, I have always been curious and eager to learn. Whether it is mastering a new programming language or challenging myself physically, I am always striving to better myself. I enjoy pushing my limits and exploring new challenges in various fields. I believe that continuous improvement is the key to success, and I apply this mindset to both my studies and personal life.</p>
 
-    <button>Click Me</button>
+        <p>I am particularly interested in the following areas:</p>
+        <ul>
+            <li>Software development, specifically creating applications and websites.</li>
+            <li>Artificial Intelligence and Machine Learning to solve real-world problems.</li>
+            <li>Cybersecurity and how to protect digital systems from threats.</li>
+            <li>Web technologies, including Front-end development and UI/UX design.</li>
+            <li>Data analysis and how data can be used to drive decisions in technology.</li>
+        </ul>
 
-    <h3>My Schedule</h3>
-    <table border="1">
-        <tr>
-            <th>Subject</th>
-            <th>Day</th>
-            <th>Time</th>
-        </tr>
-        <tr>
-            <td>Design and Analysis of Algorithms</td>
-            <td>Monday</td>
-            <td>14:00-15:50</td>
-        </tr>
-        <tr>
-            <td>Software Design Patterns</td>
-            <td>Tuesday</td>
-            <td>08:00-09:50</td>
-        </tr>
-        <tr>
-            <td>Kazakh Language (A2)</td>
-            <td>Tuesday</td>
-            <td>14:00-15:50</td>
-        </tr>
-        <tr>
-            <td>Software Design Patterns</td>
-            <td>Thursday</td>
-            <td>08:00-09:50</td>
-        </tr>
-    </table>
+        <p>In addition to my studies, I am involved in student tech communities, where I collaborate with like-minded individuals to build cool projects, exchange knowledge, and grow together. I am always looking for new ways to expand my skill set, and I believe that the best way to grow as a developer is by staying curious, taking on challenges, and never being afraid to fail.</p>
 
-    <h3>My Mood Today</h3>
-    <p>I'm feeling great today 😎😃🤖</p>
+        <p>Languages I know: English, Kazakh, Russian</p>
+        <p>Programming languages I know: C++, Python, Java, SQL, HTML</p>
+
+        <p class="quote">“Success consists of going from failure to failure without loss of enthusiasm.” — Winston Churchill</p>
+    </section>
+
+    <section id="hobbies">
+        <h2>My Hobbies</h2>
+        <ul>
+            <li>Gym</li>
+            <li>Arm-wrestling</li>
+            <li>Programming</li>
+        </ul>
+    </section>
+
+    <section id="websites">
+        <h2>My Favorite Websites</h2>
+        <ul>
+            <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
+            <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+        </ul>
+    </section>
+
+    <section id="schedule">
+        <h2>My Schedule</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Day</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Design and Analysis of Algorithms (C1.2.237L)</td>
+                    <td>Monday</td>
+                    <td>14:00-15:50</td>
+                </tr>
+                <tr>
+                    <td>Introduction to Finance (C1.3.244)</td>
+                    <td>Monday</td>
+                    <td>18:00-18:50</td>
+                </tr>
+                <tr>
+                    <td>Kazakh Language 1 (online)</td>
+                    <td>Monday</td>
+                    <td>20:00-21:50</td>
+                </tr>
+                <tr>
+                    <td>Operating Systems (online)</td>
+                    <td>Tuesday</td>
+                    <td>08:00-09:50</td>
+                </tr>
+                <tr>
+                    <td>Kazakh Language 1</td>
+                    <td>Tuesday</td>
+                    <td>14:00-15:50</td>
+                </tr>
+                <tr>
+                    <td>WEB Technologies 1 (Front End) (C1.1.357K)</td>
+                    <td>Tuesday</td>
+                    <td>18:00-18:50</td>
+                </tr>
+                <tr>
+                    <td>Kazakh Language 1 (online)</td>
+                    <td>Tuesday</td>
+                    <td>21:00-21:50</td>
+                </tr>
+                <tr>
+                    <td>Introduction to Finance (C1.3.244)</td>
+                    <td>Wednesday</td>
+                    <td>17:00-18:50</td>
+                </tr>
+                <tr>
+                    <td>Operating Systems (online)</td>
+                    <td>Thursday</td>
+                    <td>08:00-08:50</td>
+                </tr>
+                <tr>
+                    <td>WEB Technologies 1 (Front End) (C1.1.357K)</td>
+                    <td>Thursday</td>
+                    <td>14:00-15:50</td>
+                </tr>
+                <tr>
+                    <td>Design and Analysis of Algorithms (C1.1.242K)</td>
+                    <td>Friday</td>
+                    <td>17:00-18:50</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="mood">
+        <h2>My Mood Today</h2>
+        <p>I'm feeling great today 😎😄🤖</p>
+    </section>
+
+    <section id="form">
+        <h2>Form</h2>
+        <form>
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Enter your full name"><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="color">Favorite Color:</label><br>
+            <input type="color" id="color" name="color"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <footer>
+        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </footer>
+</div>
+
+<script>
+    function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+    }
+</script>
 
 </body>
 </html>
