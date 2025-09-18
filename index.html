@@ -5,109 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First Webpage</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: white;
-            color: black;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-
-        header {
-            background: #f4f4f4;
-            padding: 20px;
-            text-align: center;
-        }
-
-        header img {
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-        }
-
-        h1, h2, h3 {
-            color: #333;
-        }
-
-        .nav {
-            background-color: #333;
-            padding: 10px;
-            text-align: center;
-        }
-
-        .nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 15px;
-            font-size: 1.2em;
-            display: inline-block;
-        }
-
-        .nav a:hover {
-            background-color: #007BFF;
-            border-radius: 5px;
-        }
-
-        .container {
-            padding: 20px;
-        }
-
-        section {
-            margin-top: 20px;
-            padding: 10px;
-            border-top: 1px solid #ddd;
-        }
-
-        ul {
-            list-style-type: square;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        table, th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: center;
-        }
-
-        input[type="text"], input[type="email"], input[type="color"] {
-            width: 100%;
-            padding: 8px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-        }
-
-        /* Adjust color input to be a square */
-        input[type="color"] {
-            width: 40px; 
-            height: 40px; 
-            padding: 0;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-
-        input[type="submit"] {
-            background-color: #007BFF;
-            color: white;
-            padding: 8px 16px;
-            border: none;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 20px;
-        }
+        body { font-family: Arial, sans-serif; background-color: white; color: black; margin: 0; padding: 0; line-height: 1.6; }
+        header { background: #f4f4f4; padding: 20px; text-align: center; }
+        header img { border-radius: 50%; width: 100px; height: 100px; }
+        .nav { background-color: #333; padding: 10px; text-align: center; }
+        .nav a { color: white; text-decoration: none; padding: 10px 20px; margin: 0 15px; }
+        .nav a:hover { background-color: #007BFF; }
+        .container { padding: 20px; }
+        section { margin-top: 20px; padding: 10px; border-top: 1px solid #ddd; }
+        ul { list-style-type: square; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        table, th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+        input[type="text"], input[type="email"], input[type="color"] { width: 100%; padding: 8px; margin: 10px 0; border: 1px solid #ddd; }
+        input[type="color"] { width: 40px; height: 40px; padding: 0; border-radius: 5px; }
+        input[type="submit"] { background-color: #007BFF; color: white; padding: 8px 16px; border: none; cursor: pointer; }
+        input[type="submit"]:hover { background-color: #0056b3; }
+        footer { text-align: center; margin-top: 20px; }
     </style>
 </head>
 <body>
@@ -131,8 +44,8 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Hello! My name is Aldiyar, I am a student at AITU, pursuing a degree in Software Engineering.</p>
-        <p>I am interested in software development, artificial intelligence, and web technologies.</p>
+        <p>Hello! My name is Aldiyar, I am a Software Engineering student at AITU. I know Python, HTML, CSS, Java, C++, SQL, and am passionate about programming and problem-solving.</p>
+        <p>In addition to programming, I am actively involved in sports, particularly in arm-wrestling, which helps me stay disciplined and focused. I am a very communicative person who enjoys collaborating with others, working in teams, and learning from different perspectives. My goal is to constantly improve myself, both personally and professionally, and contribute to a positive, team-oriented environment.</p>
     </section>
 
     <section id="hobbies">
@@ -157,35 +70,20 @@
         <h2>My Schedule</h2>
         <table>
             <thead>
-                <tr>
-                    <th>Subject</th>
-                    <th>Day</th>
-                    <th>Time</th>
-                </tr>
+                <tr><th>Time</th><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th></tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Design and Analysis of Algorithms</td>
-                    <td>Monday</td>
-                    <td>14:00-15:50</td>
-                </tr>
-                <tr>
-                    <td>Introduction to Finance</td>
-                    <td>Monday</td>
-                    <td>18:00-18:50</td>
-                </tr>
-                <tr>
-                    <td>Operating Systems</td>
-                    <td>Tuesday</td>
-                    <td>08:00-09:50</td>
-                </tr>
+                <tr><td>08:00 - 08:50</td><td>Operating Systems</td><td>WEB Technologies 1</td><td>Operating Systems</td><td>Intro to Finance</td><td>Operating Systems</td></tr>
+                <tr><td>09:00 - 09:50</td><td>Operating Systems</td><td>WEB Technologies 1</td><td>Intro to Finance</td><td>Intro to Finance</td><td>Operating Systems</td></tr>
+                <tr><td>14:00 - 14:50</td><td>Analytic Methods</td><td>Design & Algorithms</td><td>Analytic Methods</td><td>Design & Algorithms</td><td>Analytic Methods</td></tr>
+                <tr><td>18:00 - 18:50</td><td>Intro to Finance</td><td>Software Design Patterns</td><td>WEB Technologies 1</td><td>Software Design Patterns</td><td>Design & Algorithms</td></tr>
             </tbody>
         </table>
     </section>
 
     <section id="mood">
         <h2>My Mood Today</h2>
-        <p>Feeling great today! 😎</p>
+        <p>Feeling great today! 😎😄🤖</p>
     </section>
 
     <section id="form">
@@ -200,6 +98,7 @@
             <input type="submit" value="Submit">
         </form>
     </section>
+
 </div>
 
 <footer>
